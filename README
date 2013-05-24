@@ -1,0 +1,10 @@
+------------------
+Conversion Program
+------------------
+
+This simple conversion program converts units of distance or mass
+to another unit of distance or mass respectively. To run this program
+simply download all the files to a single directory (folder) and type "make"
+to compile the program. The executable will have a default name of "a.out".
+If you're using an IDE such as MS Visual Studios you'll need to download all
+the files to a single folder and compile acordingly.

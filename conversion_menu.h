@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 #ifndef CONVERSION_MENU_H
 #define CONVERSION_MENU_H
 #include <iostream>
@@ -14,7 +14,7 @@ public:
 	~conversion_menu(void);
 
 	void conversionMenu();
-	void menu_convertWeight();
+	void menu_convertMass();
 	void menu_convertDistance();
 };
 

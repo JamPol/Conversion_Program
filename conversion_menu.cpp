@@ -13,22 +13,27 @@ conversion_menu::~conversion_menu(void){}
 
 
 void conversion_menu::conversionMenu()
-{
-	cout << "Which conversion type would you like?";
-	cout << "\n1. Weight\n2. Distance\n\nChoice: ";
+{	
+	cout << "\n====================================\n";
+	cout << "WELCOME TO DIST-MASS CONVERTER 1.0.0\n";
+	cout << "====================================\n\n";
+	cout << "Which quantity would you like to convert?";
+	cout << "\n1. Mass\n2. Distance\n\nChoice: ";
 }
 
-void conversion_menu::menu_convertWeight()
+void conversion_menu::menu_convertMass()
 {
-	int convert_from;
-	int convert_to;
+	cout << fixed << showpoint << setprecision(3);
+
+	double convert_from;
+	double convert_to;
 	double amount;
 
-	cout << "\nConvert weight from:\n1. Megagram\n2. Kilogram\n3. Hectogram" <<
+	cout << "\nConvert mass from:\n1. Megagram\n2. Kilogram\n3. Hectogram" <<
 		"\n4. Gram\n5. Decigram\n6. Centigram\n7. Milligram\n8. Microgram" <<
 		"\n\nChoice: ";
 	cin >> convert_from;
-	cout << "\nConvert weight from:\n1. Megagram\n2. Kilogram\n3. Hectogram" <<
+	cout << "\nConvert mass to:\n1. Megagram\n2. Kilogram\n3. Hectogram" <<
 		"\n4. Gram\n5. Decigram\n6. Centigram\n7. Milligram\n8. Microgram" <<
 		"\n\nChoice: ";
 	cin >> convert_to;
@@ -50,7 +55,7 @@ void conversion_menu::menu_convertWeight()
 	else if (convert_from == 7)
 		amount = amount * milli;
 	else if (convert_from == 8)
-		amount = amount * hecto;
+		amount = amount * micro;
 
 	if (convert_to == 1)
 		amount = amount / mega;
@@ -67,26 +72,29 @@ void conversion_menu::menu_convertWeight()
 	if (convert_to == 7)
 		amount = amount / milli;
 	if (convert_to == 8)
-		amount = amount / hecto;
+		amount = amount / micro;
 
 	cout << "The converted amount is: " << amount << endl;
 	cout << "-------------------------------------" << endl;
-	system("pause");
+	cin.get();
+	//system("pause");
 	cout << endl;
 }
 
 void conversion_menu::menu_convertDistance()
 {
-	int convert_from;
-	int convert_to;
-	long double amount;
-	string string_amount;
+	cout << fixed << showpoint << setprecision(3);
 
-	cout << "\nConvert weight from:\n1. Megametre\n2. Kilometre\n3. Hectometre" <<
+	double convert_from;
+	double convert_to;
+	double amount;
+	//string string_amount;
+
+	cout << "\nConvert distance from:\n1. Megametre\n2. Kilometre\n3. Hectometre" <<
 		"\n4. Metre\n5. Decimetre\n6. Centimetre\n7. Millimetre\n8. Micrometre" <<
 		"\n\nChoice: ";
 	cin >> convert_from;
-	cout << "\nConvert weight from:\n1. Megametre\n2. Kilometre\n3. Hectometre" <<
+	cout << "\nConvert distance to:\n1. Megametre\n2. Kilometre\n3. Hectometre" <<
 		"\n4. Metre\n5. Decimetre\n6. Centimetre\n7. Millimetre\n8. Micrometre" <<
 		"\n\nChoice: ";
 	cin >> convert_to;
@@ -108,7 +116,7 @@ void conversion_menu::menu_convertDistance()
 	else if (convert_from == 7)
 		amount = amount * milli;
 	else if (convert_from == 8)
-		amount = amount * hecto;
+		amount = amount * micro;
 
 	if (convert_to == 1)
 		amount = amount / mega;
@@ -125,11 +133,12 @@ void conversion_menu::menu_convertDistance()
 	if (convert_to == 7)
 		amount = amount / milli;
 	if (convert_to == 8)
-		amount = amount / hecto;
+		amount = amount / micro;
 
-	string_amount = amount;
-	cout << "The converted amount is: " << string_amount << endl;
+	//string_amount = amount;
+	cout << "The converted amount is: " << amount << endl;
 	cout << "-------------------------------------" << endl;
-	system("pause");
+	cin.get();
+	//system("pause");
 	cout << endl;
 }

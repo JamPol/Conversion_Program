@@ -11,7 +11,7 @@ int main()
 		cin >> menuChoice;
 		switch (menuChoice)
 		{
-		case 1: Menu.menu_convertWeight();
+		case 1: Menu.menu_convertMass();
 			break;
 		case 2: Menu.menu_convertDistance();
 			break;
